@@ -25,10 +25,13 @@ module.exports = {
     filename: "bundle.js"
   },
   devServer: {
+    devServer: {
     contentBase: path.join(__dirname, "/"),
     port: 3000,
     publicPath: "http://localhost:3000/dist/",
-    watchContentBase: true
+    watchContentBase: true,
+    historyApiFallback: true,
+  },
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]
 }
