@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import axios from "axios"
 import ProjectCard from "./ProjectCard"
-import {UndrawDesignerLife}  from "react-undraw-illustrations"
+
 
 
 
