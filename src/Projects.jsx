@@ -25,7 +25,6 @@ class Projects extends Component {
     render() {
         const projects = this.state.projects
         let projectsList
-
         if (projects.length > 0) {
             projectsList = projects.map(project => {
                 return (
@@ -40,7 +39,7 @@ class Projects extends Component {
             <div className="content-wrapper">
                 <div className="flex mb-4">
                     <div className="w-1/4">
-                        <UndrawDashboard />
+                        {/* <UndrawDashboard /> */}
                     </div>
                     <div className="w-3/4">
                         <h1>My Projects</h1>

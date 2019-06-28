@@ -1,13 +1,19 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { BrowserRouter } from 'react-router-dom'
-import { Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+
 import Projects from "./Projects"
 import About from "./About"
 import Hello from "./Hello"
 import Header from "./Header"
 import Footer from "./Footer"
 import './css/tailwind.css'
+
+library.add(faBars, faTimes)
+
 
 const App = () => {
     return (<div className="page-wrapper">
