@@ -1,63 +1,55 @@
-import axios from "axios"
 import React, { Component } from "react"
+import axios from "axios"
+import StudyCard from "./StudyCard"
 import './css/tailwind.css'
 
-const Study = (props) => {
-    let study = props.study
-    return(
-        <div key={study.id} className="cv-section-wrapper">
-
-            <div className="cv-title">{study.subject}</div>
-            <div className="cv-job">
-                <a href={study.website} target="_blank" className="content-link">{study.school}</a>
-                <p className="content-text">{study.dates}</p>
-            </div>
-                
-            <div className="cv-description">
-                <div className="content-text">{study.description}</div>    
-            </div>
-
-        </div>
-    )
-}
-
-class StudyList extends Component {
-    constructor() {
+class Studies extends Component {
+    constructor () {
         super();
-        this.state={
-            study: []
-        }
+        this.state = {
+            studies: [ ]
+        };
     }
 
-    componentDidMount(){
+    componentDidMount() {
         axios.get('./src/data/cv.education.json')
-        .then(response => {
-            this.setState({
-                study: response.data
+            .then(response => {
+                this.setState({
+                    studies: response.data
+                })
             })
-        })
     }
 
     render() {
-        let study = this.state.study
-        let studyList
-
-        if(study.length>0) {
-            studyList = study.map(study => {
+        const studies = this.state.studies
+        let studiesList
+        if (studies.length > 0) {
+            studiesList = study.map(study => {
                 return (
-                    <div key={study.id}>
-                        <Study study={study} />
+                    <div key={study.id} className="min-h-900 my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+                        <StudyCard study={study} />
                     </div>
                 )
             })
         }
-        
+
         return (
-            <>
-            <div className="cv-section-title">Education</div>
-            {studyList}    
-            </>
+            <div className="content-wrapper">
+                <div className="flex mb-4">
+                    <div className="w-1/4"></div>
+                    <div className="w-3/4">
+                        <h1>Education</h1>
+                        <p></p>
+                    </div>
+    
+                </div>
+    
+                <div className="flex flex-wrap -mx-1 lg:-mx-4">
+                    {studiesList}
+                </div>
+            </div>
         )
     }
-}
-export default StudyList
+};
+
+export default Studies

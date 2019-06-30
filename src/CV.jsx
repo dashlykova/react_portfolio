@@ -1,18 +1,18 @@
 import React from "react"
-import ExperienceList from "./CVExperience"
-import StudyList from "./CvEducation"
+import JobsList from "./CVExperience"
+import StudiesList from "./CVEducation"
 
 
-const Cv = () => {
+const CV = () => {
     return (
         <>
             <div className="mb-24">
-            <ExperienceList/>
+            <JobsList/>
             </div>
             <div className="mb-24">
-            <StudyList/>
+            <StudiesList/>
             </div>
         </>
     )
 }
-export default Cv
+export default CV

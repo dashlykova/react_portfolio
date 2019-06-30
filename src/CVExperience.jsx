@@ -1,63 +1,57 @@
-import axios from "axios"
 import React, { Component } from "react"
-import './css/tailwind.css'
+import axios from "axios"
+import JobCard from "./JobCard"
 
-const Work = (props) => {
-    let work = props.work
-    return(
-        <div key={work.id} className="cv-section-wrapper">
 
-            <div className="cv-title">{work.title}</div>
-            <div className="cv-job">
-                <a href={work.website} target="_blank" className="content-link">{work.company}</a>
-                <p className="content-text">{work.dates}</p>
-            </div>
-                
-            <div className="cv-description">
-                <div className="content-text">{work.description}</div>    
-            </div>
 
-        </div>
-    )
-}
 
-class WorkList extends Component {
-    constructor() {
+class Jobs extends Component {
+    constructor () {
         super();
-        this.state={
-            work: []
+        this.state = {
+            jobs: [ ]
         };
     }
 
-    componentDidMount(){
-        axios.get('./src/data/cv.work.json')
-        .then(response => {
-            this.setState({
-                work: response.data
+    componentDidMount() {
+        axios.get('./src/data/cv.experience.json')
+            .then(response => {
+                this.setState({
+                    jobs: response.data
+                })
             })
-        })
     }
 
     render() {
-        let work = this.state.work
-        let workList
-
-        if(work.length>0) {
-            workList = work.map(work => {
+        const jobs = this.state.jobs
+        let jobsList
+        if (jobs.length > 0) {
+            jobsList = jobs.map(job => {
                 return (
-                    <div key={work.id}>
-                        <Work work={work} />
+                    <div key={job.id} className="min-h-900 my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+                        <JobCard job={job} />
                     </div>
                 )
             })
-        };
-        
+        }
+
         return (
-            <>
-            <div className="cv-section-title">Experience</div>
-            {experienceList}    
-            </>
+            <div className="content-wrapper">
+                <div className="flex mb-4">
+                    <div className="w-1/4"></div>
+                    <div className="w-3/4">
+                        <h1>Work Experience</h1>
+                        <p>CV</p>
+                    </div>
+    
+                </div>
+    
+                <div className="flex flex-wrap -mx-1 lg:-mx-4">
+                    {jobsList}
+                </div>
+            </div>
         )
     }
 };
-export default ExperienceList
+
+export default Jobs

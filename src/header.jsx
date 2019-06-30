@@ -28,7 +28,7 @@ const Header = () => {
                 <li><NavLink  to='/'>HOME</NavLink></li>
                 <li><NavLink  activeStyle={{ fontWeight: "bold" }} to='/about'>ABOUT</NavLink></li>
                 <li><NavLink  activeStyle={{ fontWeight: "bold" }} to='/projects'>PROJECTS</NavLink></li>
-                <li><NavLink  activeStyle={{ fontWeight: "bold" }} to='/projects'>CV</NavLink></li>
+                <li><NavLink  activeStyle={{ fontWeight: "bold" }} to='/cv'>CV</NavLink></li>
 
             </ul>
         </nav>
