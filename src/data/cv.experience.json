@@ -1,0 +1,27 @@
+[
+    
+    {
+        "id": 3,
+        "dates": "March 2016 - present",
+        "company": "Assistans i Balans i Sverige",
+        "website": "http://www.assistansibalans.se/",
+        "title": "Work environment manager",
+        "description": "Responsable for improving various aspects of working environment; ergonomics, health and well-being for company employees "
+    },
+    {
+        "id": 2,
+        "dates": "September 2014 - October 2017",
+        "company": "Alamo Engineering GmbH",
+        "website": "https://alamo-engineering.com/",
+        "title": "Sales Account Manager",
+        "description": "Company leads development of unique modification and upgrade solutions for business and private aviation."
+    },
+    {
+        "id": 1,
+        "dates": "December 2011 - January 2018",
+        "company": "Helling's Travel",
+        "website": "http://hellingstravel.com/eng/it_buenosaires.html",
+        "title": "Key Account Manager",
+        "description": "Responsible for the development of sales in East European market. Oﬀicial company representative at tourism exhibitions worldwide. In Europe: FIT Madrid, Reiselivsmessen Oslo, Vakantiebeurs Utrecht, MITT Moscow a.o"
+    }
+]

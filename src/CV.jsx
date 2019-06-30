@@ -1,5 +1,5 @@
 import React from "react"
-import WorkList from "./CVExperience"
+import ExperienceList from "./CVExperience"
 import StudyList from "./CvEducation"
 
 
@@ -7,7 +7,7 @@ const Cv = () => {
     return (
         <>
             <div className="mb-24">
-            <WorkList/>
+            <ExperienceList/>
             </div>
             <div className="mb-24">
             <StudyList/>
