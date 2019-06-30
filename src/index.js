@@ -8,7 +8,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import Projects from "./Projects"
 import About from "./About"
 import Hello from "./Hello"
-import Header from "./Header"
+import Sidebar from "./Sidebar"
 import Footer from "./Footer"
 import CV from "./CV"
 import './css/tailwind.css'
@@ -19,7 +19,7 @@ library.add(faBars, faTimes)
 const App = () => {
     return (<div className="page-wrapper">
         <div className="page-content">
-            <Header />
+            <Sidebar />
             <div className="content-wrapper">
                 <Switch>
                     <Route exact path='/' component={Hello}></Route>
