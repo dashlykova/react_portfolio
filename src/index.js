@@ -10,6 +10,7 @@ import About from "./About"
 import Hello from "./Hello"
 import Header from "./Header"
 import Footer from "./Footer"
+import CV from "./CV"
 import './css/tailwind.css'
 
 library.add(faBars, faTimes)
@@ -24,6 +25,7 @@ const App = () => {
                     <Route exact path='/' component={Hello}></Route>
                     <Route exact path='/about' component={About}></Route>
                     <Route exact path='/projects' component={Projects}></Route>
+                    <Route exact path='/CV' component={CV}></Route>
                 </Switch>
             </div>
             <Footer />
