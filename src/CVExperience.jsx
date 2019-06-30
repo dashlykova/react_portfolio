@@ -1,35 +1,35 @@
 import React, { Component } from "react"
 import axios from "axios"
-import ProjectCard from "./ProjectCard"
+import JobCard from "./JobCard"
 
 
 
 
-class Projects extends Component {
+class Jobs extends Component {
     constructor () {
         super();
         this.state = {
-            projects: [ ]
+            jobs: [ ]
         };
     }
 
     componentDidMount() {
-        axios.get('./src/data/projects.json')
+        axios.get('./src/data/cv.experience.json')
             .then(response => {
                 this.setState({
-                    projects: response.data
+                    jobs: response.data
                 })
             })
     }
 
     render() {
-        const projects = this.state.projects
-        let projectsList
-        if (projects.length > 0) {
-            projectsList = projects.map(project => {
+        const jobs = this.state.jobs
+        let jobsList
+        if (jobs.length > 0) {
+            jobsList = jobs.map(job => {
                 return (
-                    <div key={project.id} className="min-h-900 my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-                        <ProjectCard project={project} />
+                    <div key={job.id} className="min-h-900 my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+                        <JobCard job={job} />
                     </div>
                 )
             })
@@ -40,18 +40,18 @@ class Projects extends Component {
                 <div className="flex mb-4">
                     <div className="w-1/4"></div>
                     <div className="w-3/4">
-                        <h1>My Projects</h1>
-                        <p>This is a selection of some of my projects I have been working on.</p>
+                        <h1>Work Experience</h1>
+                        <p>CV</p>
                     </div>
     
                 </div>
     
                 <div className="flex flex-wrap -mx-1 lg:-mx-4">
-                    {projectsList}
+                    {jobsList}
                 </div>
             </div>
         )
     }
 };
 
-export default Projects
+export default Jobs

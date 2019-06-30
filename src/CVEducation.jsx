@@ -1,35 +1,33 @@
 import React, { Component } from "react"
 import axios from "axios"
-import ProjectCard from "./ProjectCard"
+import StudyCard from "./StudyCard"
+import './css/tailwind.css'
 
-
-
-
-class Projects extends Component {
+class Studies extends Component {
     constructor () {
         super();
         this.state = {
-            projects: [ ]
+            studies: [ ]
         };
     }
 
     componentDidMount() {
-        axios.get('./src/data/projects.json')
+        axios.get('./src/data/cv.education.json')
             .then(response => {
                 this.setState({
-                    projects: response.data
+                    studies: response.data
                 })
             })
     }
 
     render() {
-        const projects = this.state.projects
-        let projectsList
-        if (projects.length > 0) {
-            projectsList = projects.map(project => {
+        const studies = this.state.studies
+        let studiesList
+        if (studies.length > 0) {
+            studiesList = studies.map(study => {
                 return (
-                    <div key={project.id} className="min-h-900 my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-                        <ProjectCard project={project} />
+                    <div key={study.id} className="min-h-900 my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+                        <StudyCard study={study} />
                     </div>
                 )
             })
@@ -40,18 +38,18 @@ class Projects extends Component {
                 <div className="flex mb-4">
                     <div className="w-1/4"></div>
                     <div className="w-3/4">
-                        <h1>My Projects</h1>
-                        <p>This is a selection of some of my projects I have been working on.</p>
+                        <h1>Education</h1>
+                        <p></p>
                     </div>
     
                 </div>
     
                 <div className="flex flex-wrap -mx-1 lg:-mx-4">
-                    {projectsList}
+                    {studiesList}
                 </div>
             </div>
         )
     }
 };
 
-export default Projects
+export default Studies

@@ -2,13 +2,19 @@ import React from "react"
 
 const Footer = () => {
     return (
-        <div className="footer-wrapper">
+        <div style= {footer} className="footer-wrapper">
                 <div className="footer-content">
-                        Made with React
                 </div>
         </div>
 )
 
 }
+
+const footer = {
+        padding: "5px",
+        background: "black"
+}
+
+
 
 export default Footer

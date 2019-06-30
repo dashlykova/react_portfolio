@@ -1,0 +1,19 @@
+[
+    
+    {
+        "id": 2,
+        "dates": "2019",
+        "company": "Craft Academy",
+        "website": "https://craftacademy.se/english/",
+        "title": "Full Stack Web Developer",
+        "description": "Full Stack Web Developer: Ruby, Ruby on Rails, JavaScript, React, Test Driven Development, Behaviour Driven Development, Agile practices, a.o"
+    },
+    {
+        "id": 1,
+        "dates": "2010 - 2012",
+        "company": "University of Buenos Aires",
+        "website": "http://www.uba.ar/",
+        "description": "Bachelor in language interpretation and translation"
+        
+    }
+]
