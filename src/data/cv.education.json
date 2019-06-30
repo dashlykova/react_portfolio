@@ -1,0 +1,27 @@
+[
+    
+    {
+        "id": 3,
+        "dates": "2019",
+        "company": "Craft Academy",
+        "website": "https://craftacademy.se/english/",
+        "title": "Full Stack Web Developer",
+        "description": "Ruby, Ruby on Rails, JavaScript, React, Test Driven Development, Behaviour Driven Development, Agile practices, a.o"
+    },
+    {
+        "id": 2,
+        "dates": "September 2014 - October 2017",
+        "company": "Alamo Engineering GmbH",
+        "website": "https://alamo-engineering.com/",
+        "title": "Sales Account Manager",
+        "description": "Company leads development of unique modification and upgrade solutions for business and private aviation."
+    },
+    {
+        "id": 1,
+        "dates": "2010 - 2012",
+        "company": "University of Buenos Aires",
+        "website": "http://www.uba.ar/",
+        "title": "Bachelor in language interpretation and translation"
+        
+    }
+]
