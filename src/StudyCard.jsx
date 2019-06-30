@@ -1,3 +1,5 @@
+import React from "react"
+
 const StudyCard = (props) => {
     let study = props.study
     return (
@@ -7,7 +9,7 @@ const StudyCard = (props) => {
 
 
             <div className="px-6 py-4" style={{ minHeight: '150px' }} >
-                <div className="font-bold text-xl mb-2">{job.name}</div>
+                <div className="font-bold text-xl mb-2">{study.name}</div>
                 <p className="text-grey-darker text-base">
                     {study.description}
                 </p>

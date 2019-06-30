@@ -24,7 +24,7 @@ class Studies extends Component {
         const studies = this.state.studies
         let studiesList
         if (studies.length > 0) {
-            studiesList = study.map(study => {
+            studiesList = studies.map(study => {
                 return (
                     <div key={study.id} className="min-h-900 my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
                         <StudyCard study={study} />
